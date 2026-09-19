@@ -33,22 +33,6 @@ Alerts provide immediate feedback about the state or result of an action and may
 
 ---
 
-## Variants
-
-Known variants:
-
-- Info
-- Success
-- Warning
-- Danger
-- Skeleton
-
-This document currently specifies the `Info / Default` variant.
-
-Other variants must reuse the same structural rules unless explicitly documented otherwise.
-
----
-
 ## Anatomy
 
 Alert Card consists of:
@@ -70,51 +54,51 @@ Alert Card
     │   └── Supporting text
     └── Optional action
 
-The optional action exists in the component structure but is hidden in the currently documented variant.
+The optional action exists in the component structure but may be hidden depending on the variant.
 
 ---
 
-## Info / Default
+## Variants
 
-### Container
+Alert Card supports the following status variants:
 
-- Width in reference instance: `328px`
-- Height in reference instance: `118px`
-- Padding: `padding-XL`
+- Info
+- Success
+- Warning
+- Danger
+- Skeleton
+
+Info, Success, Warning and Danger share the same anatomy,
+layout, typography, spacing, radius and elevation.
+
+Status variants must not create independent component implementations.
+
+They must use the same Alert Card component and change only the
+status-specific tokens and icon.
+
+---
+
+## Shared layout
+
+The following rules apply to Info, Success, Warning and Danger:
+
+- Outer padding: `padding-XL`
+- Gap between status icon and title: `padding-LG`
+- Gap between headline and supporting text: `padding-SM`
 - Border radius: `border-radius-SM`
-- Background: `pbcon-color-accent-bg-info-low`
 - Shadow: `drop-shadow-XS`
+- Status icon size: `24 × 24px`
 
-Do not hardcode the resolved values when the corresponding token exists.
+Reference instance:
 
-### Layout
+- Width: `328px`
+- Height: `118px`
 
-Outer padding:
+The reference dimensions must not be treated as fixed component dimensions unless explicitly required by the implementation context.
 
-`padding-XL`
+---
 
-Headline layout:
-
-Status icon + Title
-
-Gap between status icon and title:
-
-`padding-LG`
-
-Gap between headline and supporting text:
-
-`padding-SM`
-
-### Status icon
-
-- Size: `24 × 24px`
-- Color: `pbcon-color-accent-icon-info`
-
-The icon must use an official icon asset when available.
-
-Do not recreate or approximate an existing official icon.
-
-### Title
+## Title
 
 Typography:
 
@@ -128,11 +112,9 @@ Resolved typography:
 - Line height: 21
 - Letter spacing: 0.4
 
-Color:
+---
 
-`pbcon-color-accent-text-info-high`
-
-### Supporting text
+## Supporting text
 
 Typography:
 
@@ -149,6 +131,96 @@ Resolved typography:
 Color:
 
 `pbcon-color-accent-text-neutral-high`
+
+---
+
+## Status variants
+
+### Info
+
+Background:
+
+`pbcon-color-accent-bg-info-low`
+
+Status icon color:
+
+`pbcon-color-accent-icon-info`
+
+Title color:
+
+`pbcon-color-accent-text-info-high`
+
+---
+
+### Success
+
+Background:
+
+`pbcon-color-accent-bg-success-low`
+
+Status icon color:
+
+`pbcon-color-accent-icon-success`
+
+Title color:
+
+`pbcon-color-accent-text-success-high`
+
+---
+
+### Warning
+
+Background:
+
+`pbcon-color-accent-bg-warning-low`
+
+Status icon color:
+
+`pbcon-color-accent-icon-warning`
+
+Title color:
+
+`pbcon-color-accent-text-warning-high`
+
+---
+
+### Danger
+
+Background:
+
+`pbcon-color-accent-bg-danger-low`
+
+Status icon color:
+
+`pbcon-color-accent-icon-danger`
+
+Title color:
+
+`pbcon-color-accent-text-danger-high`
+
+---
+
+## Skeleton
+
+Skeleton represents the loading state of Alert Card.
+
+Background:
+
+`pbcon-color-skeleton-light`
+
+Shared structure tokens:
+
+- Outer padding: `padding-XL`
+- Internal spacing: `padding-LG`
+- Border radius: `border-radius-SM`
+
+Skeleton must preserve the approximate geometry of the final Alert Card to avoid layout shift when content becomes available.
+
+Do not replace Skeleton with a generic spinner.
+
+No shadow token is exposed on the documented Skeleton variant.
+
+Do not add a shadow unless the Figma source explicitly defines one.
 
 ---
 
@@ -185,4 +257,6 @@ Icons:
 - Preserve the component anatomy.
 - Use the Figma component as the visual source of truth.
 - Use this document as the implementation contract.
+- Reuse one Alert Card component for all status variants.
+- Do not create separate InfoAlert, SuccessAlert, WarningAlert or DangerAlert implementations.
 - If a required value is not documented or available in the Design System, do not infer it. Report the missing value instead.
