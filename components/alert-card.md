@@ -2,10 +2,6 @@
 
 ## Figma source
 
-Official Figma source:
-
-https://www.figma.com/design/wNFZFxAdn6u2Z3EXLA9Bp3/%E2%9A%AA%EF%B8%8F--CRE--Gest%C3%A3o?node-id=610-452&m=dev
-
 The Figma component is the visual source of truth.
 
 ---
