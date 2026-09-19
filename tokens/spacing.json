@@ -1,1 +1,40 @@
+{
+  "border-radius-none": 0,
+  "border-radius-XXS": 2,
+  "border-radius-XS": 4,
+  "border-radius-SM": 8,
+  "border-radius-MD": 16,
+  "border-radius-LG": 24,
+  "border-radius-XL": 32,
+  "border-radius-XXL": 64,
 
+  "border-width-none": 0,
+  "border-width-XS": 1,
+  "border-width-SM": 2,
+  "border-width-MD": 4,
+  "border-width-LG": 6,
+  "border-width-XL": 8,
+
+  "padding-none": 0,
+  "padding-MIN": 2,
+  "padding-XXS": 4,
+  "padding-XS": 6,
+  "padding-SM": 8,
+  "padding-MD": 10,
+  "padding-LG": 12,
+  "padding-XL": 16,
+  "padding-XXL": 24,
+  "padding-MAX": 32,
+
+  "margin-spacing-none": 0,
+  "margin-spacing-XXS": 8,
+  "margin-spacing-XS": 16,
+  "margin-spacing-SM": 24,
+  "margin-spacing-MD": 32,
+  "margin-spacing-LG": 40,
+  "margin-spacing-XL": 48,
+  "margin-spacing-XXL": 56,
+
+  "breakpoints-mobile-min-width": 320,
+  "breakpoints-mobile-max-width": 430
+}
