@@ -1,4 +1,6 @@
 {
+  "unit": "px",
+
   "border-radius-none": 0,
   "border-radius-XXS": 2,
   "border-radius-XS": 4,
