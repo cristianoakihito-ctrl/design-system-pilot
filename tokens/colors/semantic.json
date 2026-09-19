@@ -43,6 +43,8 @@
   "pbcon-color-link-pressed": "{pbcon-color-global-brand-primary-900}",
   "pbcon-color-link-disabled": "{pbcon-color-global-neutral-gray-300}",
 
+  "pbcon-color-skeleton-light": "{pbcon-color-global-neutral-gray-50}",
+
   "pbcon-color-fg-brand-primary-max": "{pbcon-color-global-brand-primary-700}",
   "pbcon-color-fg-brand-primary-high": "{pbcon-color-global-brand-primary-200}",
   "pbcon-color-fg-brand-primary-medium": "{pbcon-color-global-brand-primary-100}",
