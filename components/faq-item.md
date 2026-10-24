@@ -128,7 +128,10 @@ Do not create independent desktop and mobile components.
 ### Toggle icon container
 
 - Background: `pbcon-color-bg-brand-primary-medium`
-- Padding, border radius and icon size: see Documentation status (pending)
+- Padding: `padding-XS`
+- Border radius: `border-radius-SM`
+- Icon size: 20 x 20 (no icon size token yet, see Documentation status)
+- Container size: 32 x 32
 
 ### Typography
 
@@ -320,9 +323,9 @@ The header button resets the browser button styles (`appearance`, `border`, `bac
   .faq-item { padding: var(--pbcon-padding-XL); }
   .faq-trigger { gap: var(--pbcon-margin-spacing-XS); }
   .faq-title { font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
-  .faq-icon { padding: 6.4px; border-radius: 6.4px; background: var(--pbcon-color-bg-brand-primary-medium); }
-  .faq-icon-minus { top: 6.4px; left: 6.4px; }
-  .faq-icon svg { width: 19.2px; height: 19.2px; }
+  .faq-icon { padding: var(--pbcon-padding-XS); border-radius: var(--pbcon-border-radius-SM); background: var(--pbcon-color-bg-brand-primary-medium); }
+  .faq-icon-minus { top: var(--pbcon-padding-XS); left: var(--pbcon-padding-XS); }
+  .faq-icon svg { width: 20px; height: 20px; } /* 20px: no icon size token yet (pending in faq-item.md) */
   .faq-content { padding-top: var(--pbcon-padding-XL); font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
 }
 .faq-icon { position: relative; }
@@ -492,6 +495,7 @@ Confirmed:
 Decided (2026-10-24), source of truth is this repository (not registered in Figma, by decision):
 
 - Motion (option C) and the tokens in `/tokens/motion.json`
+- Mobile toggle icon container: `padding-XS`, `border-radius-SM` and icon 20 x 20 (replaces the 6.4 / 6.4 / 19.2 values; Figma still to be aligned)
 
 Proposed (not defined in Figma, needs design approval):
 
@@ -499,9 +503,15 @@ Proposed (not defined in Figma, needs design approval):
 
 Pending:
 
-- Mobile toggle icon container uses values without tokens in Figma
-  (padding 6.4px, border radius 6.4px, icon 19.2 x 19.2). Define tokens
-  or align with Desktop/tablet (`padding-SM`, `border-radius-SM`, 24 x 24).
+- Figma Mobile toggle icon container still has padding 6.4px, border radius 6.4px
+  and icon 19.2 x 19.2 (an 80% scale of Desktop/tablet). Update it to `padding-XS` (6),
+  `border-radius-SM` (8) and icon 20 x 20, as decided. The container stays 32 x 32.
+- There is no icon size token. Icon sizes are 24 x 24 (Desktop/tablet) and 20 x 20 (Mobile).
+  Create an icon size token group only when a second component needs it.
+- Spacing families are mixed in Figma: the gap between title and icon uses `margin-spacing-*`
+  and the gap between header and content uses `padding-*`. Decide whether gaps get their own family.
+- The content entrance offset (8px) borrows `padding-SM`, a spacing token, as an animation distance.
+  Define a distance token in `/tokens/motion.json`.
 - Toggle icon container background uses a different token per device
   (`pbcon-color-fg-brand-primary-medium` on Desktop/tablet,
   `pbcon-color-bg-brand-primary-medium` on Mobile). Both resolve to the
