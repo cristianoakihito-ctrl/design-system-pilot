@@ -308,22 +308,22 @@ Inline SVG icons use `fill="currentColor"`; the icon color comes from
 The header button resets the browser button styles (`appearance`, `border`, `background`, `font`).
 
 ```css
-.faq-item { padding: var(--pbcon-padding-XL) var(--pbcon-padding-XXL); border: var(--pbcon-border-width-XS) solid var(--pbcon-color-border-default-low); border-radius: var(--pbcon-radius-MD); }
+.faq-item { padding: var(--pbcon-padding-XL) var(--pbcon-padding-XXL); border: var(--pbcon-border-width-XS) solid var(--pbcon-color-border-default-low); border-radius: var(--pbcon-border-radius-MD); }
 .faq-item > h3, .faq-item > h2 { margin: 0; }
-.faq-trigger { appearance: none; border: none; background: transparent; cursor: pointer; font-family: inherit; color: inherit; display: flex; align-items: center; width: 100%; justify-content: flex-start; gap: var(--pbcon-margin-SM); padding: var(--pbcon-padding-XS) var(--pbcon-padding-none); margin: calc(-1 * var(--pbcon-padding-XS)) 0; text-align: left; }
+.faq-trigger { appearance: none; border: none; background: transparent; cursor: pointer; font-family: inherit; color: inherit; display: flex; align-items: center; width: 100%; justify-content: flex-start; gap: var(--pbcon-margin-spacing-SM); padding: var(--pbcon-padding-XS) var(--pbcon-padding-none); margin: calc(-1 * var(--pbcon-padding-XS)) 0; text-align: left; }
 .faq-trigger:focus-visible { outline: var(--pbcon-border-width-SM) solid var(--pbcon-color-border-brand-primary-high); outline-offset: var(--pbcon-border-width-SM); }
-.faq-title { flex-grow: 1; min-width: 0; font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-700); line-height: var(--pbcon-line-height-17); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
-.faq-icon { display: flex; flex-shrink: 0; padding: var(--pbcon-padding-SM); border-radius: var(--pbcon-radius-SM); background: var(--pbcon-color-fg-brand-primary-medium); }
+.faq-title { flex-grow: 1; min-width: 0; font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-700); line-height: var(--pbcon-line-height-17-150); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
+.faq-icon { display: flex; flex-shrink: 0; padding: var(--pbcon-padding-SM); border-radius: var(--pbcon-border-radius-SM); background: var(--pbcon-color-fg-brand-primary-medium); }
 .faq-icon-minus { top: var(--pbcon-padding-SM); left: var(--pbcon-padding-SM); }
-.faq-content { padding-top: var(--pbcon-padding-XXL); font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-400); line-height: var(--pbcon-line-height-17); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
+.faq-content { padding-top: var(--pbcon-padding-XXL); font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-400); line-height: var(--pbcon-line-height-17-150); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
 @media (max-width: 430px) {
   .faq-item { padding: var(--pbcon-padding-XL); }
-  .faq-trigger { gap: var(--pbcon-margin-XS); }
-  .faq-title { font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12); }
+  .faq-trigger { gap: var(--pbcon-margin-spacing-XS); }
+  .faq-title { font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
   .faq-icon { padding: 6.4px; border-radius: 6.4px; background: var(--pbcon-color-bg-brand-primary-medium); }
   .faq-icon-minus { top: 6.4px; left: 6.4px; }
   .faq-icon svg { width: 19.2px; height: 19.2px; }
-  .faq-content { padding-top: var(--pbcon-padding-XL); font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12); }
+  .faq-content { padding-top: var(--pbcon-padding-XL); font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
 }
 .faq-icon { position: relative; }
 .faq-icon-plus, .faq-icon-minus { display: block; transition: opacity var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard), transform var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard); }
