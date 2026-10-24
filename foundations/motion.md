@@ -8,7 +8,8 @@ appeared or moved. It must help the user follow the change, never decorate it.
 Values live in `/tokens/motion.json`. This document explains when to use each one.
 
 Status: defined on 2026-10-24 together with the FAQ item component.
-Not yet registered in Figma.
+Motion is not registered in the Figma file, by decision. This repository is the source of truth:
+Figma prototypes cannot reproduce the full motion (staggered content fade, icon rotation, height by grid rows).
 
 ---
 

@@ -167,7 +167,7 @@ Hover, focus, pressed and disabled states are not defined in Figma.
 
 ## Motion
 
-Status: decided on 2026-10-24 (option C of the motion comparison). Not yet registered in the Figma component.
+Status: decided on 2026-10-24 (option C of the motion comparison). The Figma component has no motion, by decision: this document and `/examples/faq-item.html` are the source of truth.
 Values come from `/tokens/motion.json` and follow the references listed
 in Motion references. The expand curve comes from the FAQ of the PB Soma+ landing page.
 General motion rules and every motion token: `/foundations/motion.md`.
@@ -489,7 +489,7 @@ Confirmed:
 - Toggle icons
 - Content typography `body-LG-400` / `body-SM-400` (updated in Figma)
 
-Decided (2026-10-24), not yet registered in Figma:
+Decided (2026-10-24), source of truth is this repository (not registered in Figma, by decision):
 
 - Motion (option C) and the tokens in `/tokens/motion.json`
 
