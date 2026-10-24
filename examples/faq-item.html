@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ item: exemplo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Gerado a partir de tokens/ e assets/icons/ deste repositório. Contrato: components/faq-item.md -->
+<style>
+  :root {
+    --pbcon-border-width-SM: 2px;
+    --pbcon-border-width-XS: 1px;
+    --pbcon-color-bg-brand-primary-medium: #D9E3FF;
+    --pbcon-color-bg-neutral-default: #FFFFFF;
+    --pbcon-color-border-brand-primary-high: #004BD4;
+    --pbcon-color-border-default-low: #DDDDDD;
+    --pbcon-color-fg-brand-primary-medium: #D9E3FF;
+    --pbcon-color-icon-brand-primary-high: #004BD4;
+    --pbcon-color-text-neutral-high: #000000;
+    --pbcon-color-text-neutral-low: #727272;
+    --pbcon-font-size-12: 12px;
+    --pbcon-font-size-14: 14px;
+    --pbcon-font-size-17: 17px;
+    --pbcon-font-size-27: 27px;
+    --pbcon-font-weight-400: 400;
+    --pbcon-font-weight-700: 700;
+    --pbcon-font-weight-800: 800;
+    --pbcon-letter-spacing-0: 0px;
+    --pbcon-letter-spacing-0-4: 0.4px;
+    --pbcon-line-height-12: 18px;
+    --pbcon-line-height-14: 21px;
+    --pbcon-line-height-17: 26px;
+    --pbcon-line-height-27: 32px;
+    --pbcon-margin-SM: 24px;
+    --pbcon-margin-XL: 48px;
+    --pbcon-margin-XS: 16px;
+    --pbcon-motion-duration-LG: 300ms;
+    --pbcon-motion-duration-MD: 200ms;
+    --pbcon-motion-duration-XS: 100ms;
+    --pbcon-motion-duration-XXS: 50ms;
+    --pbcon-motion-easing-linear: cubic-bezier(0, 0, 1, 1);
+    --pbcon-motion-easing-soft-decelerate: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --pbcon-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+    --pbcon-motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
+    --pbcon-motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
+    --pbcon-padding-LG: 12px;
+    --pbcon-padding-SM: 8px;
+    --pbcon-padding-XL: 16px;
+    --pbcon-padding-XS: 6px;
+    --pbcon-padding-XXL: 24px;
+    --pbcon-padding-none: 0px;
+    --pbcon-radius-MD: 16px;
+    --pbcon-radius-SM: 8px;
+  }
+  body { margin: 0; }
+  * { box-sizing: border-box; }
+  .icon-btn { appearance: none; border: none; background: transparent; padding: 0; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-family: inherit; color: inherit; }
+  .icon-btn:focus-visible { outline: var(--pbcon-border-width-SM) solid var(--pbcon-color-border-brand-primary-high); outline-offset: var(--pbcon-border-width-SM); }
+  ul { list-style: none; margin: 0; padding: 0; }
+  .faq-item { padding: var(--pbcon-padding-XL) var(--pbcon-padding-XXL); border: var(--pbcon-border-width-XS) solid var(--pbcon-color-border-default-low); border-radius: var(--pbcon-radius-MD); }
+  .faq-item > h3, .faq-item > h2 { margin: 0; }
+  .faq-trigger { appearance: none; border: none; background: transparent; cursor: pointer; font-family: inherit; color: inherit; display: flex; align-items: center; width: 100%; justify-content: flex-start; gap: var(--pbcon-margin-SM); padding: var(--pbcon-padding-XS) var(--pbcon-padding-none); margin: calc(-1 * var(--pbcon-padding-XS)) 0; text-align: left; }
+  .faq-trigger:focus-visible { outline: var(--pbcon-border-width-SM) solid var(--pbcon-color-border-brand-primary-high); outline-offset: var(--pbcon-border-width-SM); }
+  .faq-title { flex-grow: 1; min-width: 0; font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-700); line-height: var(--pbcon-line-height-17); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
+  .faq-icon { display: flex; flex-shrink: 0; padding: var(--pbcon-padding-SM); border-radius: var(--pbcon-radius-SM); background: var(--pbcon-color-fg-brand-primary-medium); }
+  .faq-icon-minus { top: var(--pbcon-padding-SM); left: var(--pbcon-padding-SM); }
+  .faq-content { padding-top: var(--pbcon-padding-XXL); font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-400); line-height: var(--pbcon-line-height-17); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
+  @media (max-width: 430px) {
+    .faq-item { padding: var(--pbcon-padding-XL); }
+    .faq-trigger { gap: var(--pbcon-margin-XS); }
+    .faq-title { font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12); }
+    .faq-icon { padding: 6.4px; border-radius: 6.4px; background: var(--pbcon-color-bg-brand-primary-medium); }
+    .faq-icon-minus { top: 6.4px; left: 6.4px; }
+    .faq-icon svg { width: 19.2px; height: 19.2px; }
+    .faq-content { padding-top: var(--pbcon-padding-XL); font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12); }
+  }
+  .faq-icon { position: relative; }
+  .faq-icon-plus, .faq-icon-minus { display: block; transition: opacity var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard), transform var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard); }
+  .faq-icon-minus { position: absolute; opacity: 0; transform: rotate(-90deg); }
+  .faq-trigger[aria-expanded="true"] .faq-icon-plus { opacity: 0; transform: rotate(90deg); }
+  .faq-trigger[aria-expanded="true"] .faq-icon-minus { opacity: 1; transform: rotate(0deg); }
+  .faq-panel { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard), visibility 0s linear var(--pbcon-motion-duration-MD); }
+  .faq-panel[data-state="open"] { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows var(--pbcon-motion-duration-LG) var(--pbcon-motion-easing-soft-decelerate), visibility 0s linear 0s; }
+  .faq-clip { min-height: 0; overflow: hidden; }
+  .faq-content { opacity: 0; transform: translateY(calc(-1 * var(--pbcon-padding-SM))); transition: opacity var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate), transform var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate); }
+  .faq-panel[data-state="open"] .faq-content { opacity: 1; transform: none; transition: opacity var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard-decelerate) var(--pbcon-motion-duration-XXS), transform var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard-decelerate) var(--pbcon-motion-duration-XXS); }
+  @media (prefers-reduced-motion: reduce) {
+    .faq-panel, .faq-panel[data-state="open"] { transition: none; }
+    .faq-content, .faq-panel[data-state="open"] .faq-content { transform: none; transition: opacity var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-linear); }
+    .faq-icon-plus, .faq-icon-minus, .faq-trigger[aria-expanded="true"] .faq-icon-plus, .faq-trigger[aria-expanded="true"] .faq-icon-minus { transform: none; transition: opacity var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-linear); }
+  }
+  body { background: var(--pbcon-color-bg-neutral-default); color: var(--pbcon-color-text-neutral-high); font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .ex-main { max-width: 973px; margin: 0 auto; padding: var(--pbcon-margin-XL) var(--pbcon-margin-SM); }
+  .ex-h1 { margin: 0; font-size: var(--pbcon-font-size-27); font-weight: var(--pbcon-font-weight-800); line-height: var(--pbcon-line-height-27); letter-spacing: var(--pbcon-letter-spacing-0); }
+  .ex-p { margin: var(--pbcon-padding-SM) 0 var(--pbcon-margin-SM); font-size: var(--pbcon-font-size-14); font-weight: var(--pbcon-font-weight-400); line-height: var(--pbcon-line-height-14); letter-spacing: var(--pbcon-letter-spacing-0); color: var(--pbcon-color-text-neutral-low); }
+  .ex-list { display: flex; flex-direction: column; gap: var(--pbcon-padding-LG); }
+</style>
+</head>
+<body>
+<main class="ex-main"><h1 class="ex-h1">FAQ item</h1><p class="ex-p">Exemplo com o motion definido. Abaixo de 430px de largura o componente usa a versão Mobile.</p><ul class="ex-list"><li class="faq-item"><h3 style="margin: 0;"><button type="button" class="icon-btn faq-trigger" id="faq-h1" aria-expanded="false" aria-controls="faq-c1"><span class="faq-title">Quem pode contratar o empréstimo?</span><span class="faq-icon"><span class="faq-icon-plus"><svg data-icon="actions-basic-plus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0001 3.51465C13.0001 2.96236 12.5523 2.51465 12.0001 2.51465C11.4478 2.51465 11.0001 2.96236 11.0001 3.51465V10.9999H3.51477C2.96249 10.9999 2.51477 11.4476 2.51477 11.9999C2.51477 12.5522 2.96249 12.9999 3.51477 12.9999H11.0001V20.4852C11.0001 21.0375 11.4478 21.4852 12.0001 21.4852C12.5523 21.4852 13.0001 21.0375 13.0001 20.4852V12.9999H20.4853C21.0376 12.9999 21.4853 12.5522 21.4853 11.9999C21.4853 11.4476 21.0376 10.9999 20.4853 10.9999H13.0001V3.51465Z" fill="currentColor"/>
+</svg></span><span class="faq-icon-minus"><svg data-icon="actions-basic-minus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 11H20.9706C21.5228 11 21.9706 11.4477 21.9706 12C21.9706 12.5523 21.5228 13 20.9706 13H4C3.44771 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11Z" fill="currentColor"/>
+</svg></span></span></button></h3><div class="faq-panel" id="faq-c1" role="region" aria-labelledby="faq-h1" data-state="closed"><div class="faq-clip"><div class="faq-content">Pessoas com renda comprovada e cadastro aprovado na análise de crédito. As condições aparecem na simulação, antes de qualquer contratação.</div></div></div></li><li class="faq-item"><h3 style="margin: 0;"><button type="button" class="icon-btn faq-trigger" id="faq-h2" aria-expanded="true" aria-controls="faq-c2"><span class="faq-title">Quanto tempo leva para o dinheiro cair na conta?</span><span class="faq-icon"><span class="faq-icon-plus"><svg data-icon="actions-basic-plus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0001 3.51465C13.0001 2.96236 12.5523 2.51465 12.0001 2.51465C11.4478 2.51465 11.0001 2.96236 11.0001 3.51465V10.9999H3.51477C2.96249 10.9999 2.51477 11.4476 2.51477 11.9999C2.51477 12.5522 2.96249 12.9999 3.51477 12.9999H11.0001V20.4852C11.0001 21.0375 11.4478 21.4852 12.0001 21.4852C12.5523 21.4852 13.0001 21.0375 13.0001 20.4852V12.9999H20.4853C21.0376 12.9999 21.4853 12.5522 21.4853 11.9999C21.4853 11.4476 21.0376 10.9999 20.4853 10.9999H13.0001V3.51465Z" fill="currentColor"/>
+</svg></span><span class="faq-icon-minus"><svg data-icon="actions-basic-minus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 11H20.9706C21.5228 11 21.9706 11.4477 21.9706 12C21.9706 12.5523 21.5228 13 20.9706 13H4C3.44771 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11Z" fill="currentColor"/>
+</svg></span></span></button></h3><div class="faq-panel" id="faq-c2" role="region" aria-labelledby="faq-h2" data-state="open"><div class="faq-clip"><div class="faq-content">Depois que a proposta é aprovada e o contrato é assinado, o valor costuma ser depositado em até 2 dias úteis na conta informada no pedido.</div></div></div></li><li class="faq-item"><h3 style="margin: 0;"><button type="button" class="icon-btn faq-trigger" id="faq-h3" aria-expanded="false" aria-controls="faq-c3"><span class="faq-title">Posso antecipar parcelas do meu empréstimo?</span><span class="faq-icon"><span class="faq-icon-plus"><svg data-icon="actions-basic-plus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0001 3.51465C13.0001 2.96236 12.5523 2.51465 12.0001 2.51465C11.4478 2.51465 11.0001 2.96236 11.0001 3.51465V10.9999H3.51477C2.96249 10.9999 2.51477 11.4476 2.51477 11.9999C2.51477 12.5522 2.96249 12.9999 3.51477 12.9999H11.0001V20.4852C11.0001 21.0375 11.4478 21.4852 12.0001 21.4852C12.5523 21.4852 13.0001 21.0375 13.0001 20.4852V12.9999H20.4853C21.0376 12.9999 21.4853 12.5522 21.4853 11.9999C21.4853 11.4476 21.0376 10.9999 20.4853 10.9999H13.0001V3.51465Z" fill="currentColor"/>
+</svg></span><span class="faq-icon-minus"><svg data-icon="actions-basic-minus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 11H20.9706C21.5228 11 21.9706 11.4477 21.9706 12C21.9706 12.5523 21.5228 13 20.9706 13H4C3.44771 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11Z" fill="currentColor"/>
+</svg></span></span></button></h3><div class="faq-panel" id="faq-c3" role="region" aria-labelledby="faq-h3" data-state="closed"><div class="faq-clip"><div class="faq-content">Sim. Ao antecipar, os juros das parcelas pagas antes do vencimento são descontados proporcionalmente.</div></div></div></li><li class="faq-item"><h3 style="margin: 0;"><button type="button" class="icon-btn faq-trigger" id="faq-h4" aria-expanded="false" aria-controls="faq-c4"><span class="faq-title">O que fazer se eu não reconhecer uma cobrança?</span><span class="faq-icon"><span class="faq-icon-plus"><svg data-icon="actions-basic-plus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0001 3.51465C13.0001 2.96236 12.5523 2.51465 12.0001 2.51465C11.4478 2.51465 11.0001 2.96236 11.0001 3.51465V10.9999H3.51477C2.96249 10.9999 2.51477 11.4476 2.51477 11.9999C2.51477 12.5522 2.96249 12.9999 3.51477 12.9999H11.0001V20.4852C11.0001 21.0375 11.4478 21.4852 12.0001 21.4852C12.5523 21.4852 13.0001 21.0375 13.0001 20.4852V12.9999H20.4853C21.0376 12.9999 21.4853 12.5522 21.4853 11.9999C21.4853 11.4476 21.0376 10.9999 20.4853 10.9999H13.0001V3.51465Z" fill="currentColor"/>
+</svg></span><span class="faq-icon-minus"><svg data-icon="actions-basic-minus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 11H20.9706C21.5228 11 21.9706 11.4477 21.9706 12C21.9706 12.5523 21.5228 13 20.9706 13H4C3.44771 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11Z" fill="currentColor"/>
+</svg></span></span></button></h3><div class="faq-panel" id="faq-c4" role="region" aria-labelledby="faq-h4" data-state="closed"><div class="faq-clip"><div class="faq-content">Fale com o atendimento informando a data e o valor. Se suspeitar de fraude, bloqueie o acesso enquanto o caso é analisado.</div></div></div></li></ul></main>
+<script>
+  // Estado do FAQ item: só aria-expanded e data-state. O CSS cuida de todo o motion.
+  document.querySelectorAll('.faq-trigger').forEach((trigger) => {
+    const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+    trigger.addEventListener('click', () => {
+      const open = trigger.getAttribute('aria-expanded') !== 'true';
+      trigger.setAttribute('aria-expanded', String(open));
+      panel.setAttribute('data-state', open ? 'open' : 'closed');
+    });
+  });
+</script>
+</body>
+</html>
