@@ -371,7 +371,7 @@ must not introduce undocumented min-width or max-width rules.
 
 ### Shadow
 
-`/tokens/shadow.json`
+`/tokens/drop-shadow.json`
 
 ### Icons
 
