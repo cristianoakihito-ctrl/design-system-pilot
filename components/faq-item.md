@@ -84,7 +84,7 @@ Do not create independent desktop and mobile components.
 
 ### Toggle icon container
 
-- Background: `pbcon-color-fg-brand-primary-medium` (Desktop/tablet)
+- Background: `pbcon-color-fg-brand-primary-medium` (both devices)
 - Icon color: `pbcon-color-icon-brand-primary-high`
 
 ---
@@ -129,7 +129,7 @@ Do not create independent desktop and mobile components.
 
 ### Toggle icon container
 
-- Background: `pbcon-color-bg-brand-primary-medium`
+- Background: `pbcon-color-fg-brand-primary-medium` (same as Desktop/tablet)
 - Padding: `padding-XS`
 - Border radius: `border-radius-SM`
 - Icon size: `icon-size-MD` (20 x 20)
@@ -163,7 +163,7 @@ Hover, focus, pressed and disabled states are not defined in Figma.
 
 ## Behavior
 
-- Selecting the header toggles between Default and Expanded.
+- Selecting the header toggles between Default and Expanded. In Figma, the click interaction is on the header frame (`Title and icon`), not on the whole container.
 - Content wraps naturally according to the available width.
 - How items behave together (more than one expanded, which start expanded) is defined by FAQ list, see `/components/faq-list.md`.
 
@@ -326,7 +326,7 @@ The header button resets the browser button styles (`appearance`, `border`, `bac
   .faq-item { padding: var(--pbcon-padding-XL); }
   .faq-trigger { gap: var(--pbcon-gap-XS); }
   .faq-title { font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
-  .faq-icon { padding: var(--pbcon-padding-XS); border-radius: var(--pbcon-border-radius-SM); background: var(--pbcon-color-bg-brand-primary-medium); }
+  .faq-icon { padding: var(--pbcon-padding-XS); border-radius: var(--pbcon-border-radius-SM); }
   .faq-icon-minus { top: var(--pbcon-padding-XS); left: var(--pbcon-padding-XS); }
   .faq-icon svg { width: var(--pbcon-icon-size-MD); height: var(--pbcon-icon-size-MD); }
   .faq-content { padding-top: var(--pbcon-gap-XS); font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
@@ -506,10 +506,4 @@ Proposed (not defined in Figma, needs design approval):
 
 Pending:
 
-- Toggle icon container background uses a different token per device
-  (`pbcon-color-fg-brand-primary-medium` on Desktop/tablet,
-  `pbcon-color-bg-brand-primary-medium` on Mobile). Both resolve to the
-  same value; choose one.
-- In Figma the whole container is the button. For accessibility only the
-  header should be interactive.
 - Hover, focus, pressed and disabled states.
