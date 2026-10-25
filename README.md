@@ -8,7 +8,7 @@ Piloto pessoal para estruturar assets e documentação do Design System.
 | --- | --- |
 | `assets/icons/` | Ícones SVG oficiais (24 x 24, monocromáticos, nomes em kebab-case) |
 | `tokens/` | Tokens em JSON: cores, espaçamento, tipografia, sombra e motion |
-| `foundations/` | Regras de uso dos fundamentos: motion e layout da página |
+| `foundations/` | Regras de uso dos fundamentos: tipografia (carregar a fonte), layout da página e motion |
 | `components/` | Documentação de cada componente, usada como contrato de implementação |
 | `examples/` | Exemplos que abrem no navegador, montados só com tokens e ícones deste repositório |
 
@@ -28,7 +28,7 @@ Piloto pessoal para estruturar assets e documentação do Design System.
 | `tokens/colors/semantic.json` | Cores semânticas (apontam para a paleta global) |
 | `tokens/colors/component.json` | Cores de componentes (apontam para semânticas ou globais) |
 | `tokens/spacing.json` | Padding, gap, raio, borda, tamanho de ícone, breakpoints e largura máxima do conteúdo (regras em `foundations/layout.md`) |
-| `tokens/typography.json` | Família, tamanhos, pesos, alturas de linha e espaçamento entre letras |
+| `tokens/typography.json` | Família, tamanhos, pesos, alturas de linha e espaçamento entre letras (como carregar a fonte em `foundations/typography.md`) |
 | `tokens/drop-shadow.json` | Sombras |
 | `tokens/motion.json` | Durações, distâncias e curvas de animação (regras em `foundations/motion.md`) |
 
@@ -50,5 +50,5 @@ Piloto pessoal para estruturar assets e documentação do Design System.
 4. Crie `components/<nome-do-componente>.md` seguindo a estrutura de `components/faq-item.md`.
 5. Registre o que o Figma não define na seção Documentation status, como pendência.
 6. Se o componente tiver motion, use os tokens de `tokens/motion.json` e as regras de `foundations/motion.md`.
-   Para montar uma tela com o componente, siga `foundations/layout.md`.
+   Para montar uma tela com o componente, siga `foundations/layout.md` e carregue a fonte como diz `foundations/typography.md`.
 7. Atualize as tabelas deste README.

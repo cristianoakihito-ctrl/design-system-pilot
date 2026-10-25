@@ -81,6 +81,7 @@ body {
   margin: 0;
   background: var(--pbcon-color-bg-neutral-default);
   color: var(--pbcon-color-text-neutral-high);
+  font-family: var(--pbcon-font-family-Montserrat), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 .page {
   box-sizing: content-box;
@@ -107,6 +108,7 @@ Media queries cannot read CSS variables: the `430px` must match `breakpoints-mob
 
 - Spacing, breakpoints and layout: `/tokens/spacing.json`
 - Page colors: `/tokens/colors/semantic.json`
+- Font loading and fallback: `/foundations/typography.md`
 
 ---
 

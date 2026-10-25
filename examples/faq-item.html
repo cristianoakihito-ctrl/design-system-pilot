@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FAQ item: exemplo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- Gerado a partir de tokens/ e assets/icons/ deste repositório. Contrato: components/faq-item.md -->
 <style>
@@ -19,6 +20,7 @@
     --pbcon-color-icon-brand-primary-high: #004BD4;
     --pbcon-color-text-neutral-high: #000000;
     --pbcon-color-text-neutral-low: #727272;
+    --pbcon-font-family-Montserrat: Montserrat;
     --pbcon-font-size-12: 12px;
     --pbcon-font-size-14: 14px;
     --pbcon-font-size-17: 17px;
@@ -97,7 +99,7 @@
     .faq-content, .faq-panel[data-state="open"] .faq-content { transform: none; transition: opacity var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-linear); }
     .faq-icon-plus, .faq-icon-minus, .faq-trigger[aria-expanded="true"] .faq-icon-plus, .faq-trigger[aria-expanded="true"] .faq-icon-minus { transform: none; transition: opacity var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-linear); }
   }
-  body { background: var(--pbcon-color-bg-neutral-default); color: var(--pbcon-color-text-neutral-high); font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  body { background: var(--pbcon-color-bg-neutral-default); color: var(--pbcon-color-text-neutral-high); font-family: var(--pbcon-font-family-Montserrat), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   .ex-main { max-width: 973px; margin: 0 auto; padding: var(--pbcon-gap-XL) var(--pbcon-gap-SM); }
   .ex-h1 { margin: 0; font-size: var(--pbcon-font-size-27); font-weight: var(--pbcon-font-weight-800); line-height: var(--pbcon-line-height-27-120); letter-spacing: var(--pbcon-letter-spacing-0); }
   .ex-p { margin: var(--pbcon-padding-SM) 0 var(--pbcon-gap-SM); font-size: var(--pbcon-font-size-14); font-weight: var(--pbcon-font-weight-400); line-height: var(--pbcon-line-height-14-150); letter-spacing: var(--pbcon-letter-spacing-0); color: var(--pbcon-color-text-neutral-low); }
