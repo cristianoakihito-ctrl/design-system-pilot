@@ -94,11 +94,11 @@ Do not create independent desktop and mobile components.
 
 - Horizontal padding: `padding-XXL`
 - Vertical padding: `padding-XL`
-- Gap between header and content: `padding-XXL`
+- Gap between header and content: `gap-SM`
 
 ### Header
 
-- Gap between title and icon: `margin-spacing-SM`
+- Gap between title and icon: `gap-SM`
 
 ### Toggle icon container
 
@@ -120,11 +120,11 @@ Do not create independent desktop and mobile components.
 ### Container spacing
 
 - Padding: `padding-XL` (all sides)
-- Gap between header and content (Expanded): `padding-XL`
+- Gap between header and content (Expanded): `gap-XS`
 
 ### Header
 
-- Gap between title and icon: `margin-spacing-XS`
+- Gap between title and icon: `gap-XS`
 
 ### Toggle icon container
 
@@ -231,6 +231,8 @@ Do not morph or edit the SVG paths of the assets.
 - Do not animate `max-height` and do not measure the content with JavaScript.
 - Use CSS transitions, not keyframe animations: transitions reverse from the current value when interrupted.
 - Keep the gap between header and content inside the animated panel, so it collapses together.
+  It is implemented as `padding-top` of the panel content, but the token is still `gap-*`:
+  the token follows the meaning (space between two elements), not the CSS property.
 - Drive every animation from the same attributes used for accessibility:
   `aria-expanded` on the header button and `data-state="open|closed"` on the panel.
 - Collapsed content must not be reachable by keyboard or screen readers:
@@ -314,20 +316,20 @@ The header button resets the browser button styles (`appearance`, `border`, `bac
 ```css
 .faq-item { padding: var(--pbcon-padding-XL) var(--pbcon-padding-XXL); border: var(--pbcon-border-width-XS) solid var(--pbcon-color-border-default-low); border-radius: var(--pbcon-border-radius-MD); }
 .faq-item > h3, .faq-item > h2 { margin: 0; }
-.faq-trigger { appearance: none; border: none; background: transparent; cursor: pointer; font-family: inherit; color: inherit; display: flex; align-items: center; width: 100%; justify-content: flex-start; gap: var(--pbcon-margin-spacing-SM); padding: var(--pbcon-padding-XS) var(--pbcon-padding-none); margin: calc(-1 * var(--pbcon-padding-XS)) 0; text-align: left; }
+.faq-trigger { appearance: none; border: none; background: transparent; cursor: pointer; font-family: inherit; color: inherit; display: flex; align-items: center; width: 100%; justify-content: flex-start; gap: var(--pbcon-gap-SM); padding: var(--pbcon-padding-XS) var(--pbcon-padding-none); margin: calc(-1 * var(--pbcon-padding-XS)) 0; text-align: left; }
 .faq-trigger:focus-visible { outline: var(--pbcon-border-width-SM) solid var(--pbcon-color-border-brand-primary-high); outline-offset: var(--pbcon-border-width-SM); }
 .faq-title { flex-grow: 1; min-width: 0; font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-700); line-height: var(--pbcon-line-height-17-150); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
 .faq-icon { display: flex; flex-shrink: 0; padding: var(--pbcon-padding-SM); border-radius: var(--pbcon-border-radius-SM); background: var(--pbcon-color-fg-brand-primary-medium); }
 .faq-icon-minus { top: var(--pbcon-padding-SM); left: var(--pbcon-padding-SM); }
-.faq-content { padding-top: var(--pbcon-padding-XXL); font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-400); line-height: var(--pbcon-line-height-17-150); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
+.faq-content { padding-top: var(--pbcon-gap-SM); font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-400); line-height: var(--pbcon-line-height-17-150); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
 @media (max-width: 430px) {
   .faq-item { padding: var(--pbcon-padding-XL); }
-  .faq-trigger { gap: var(--pbcon-margin-spacing-XS); }
+  .faq-trigger { gap: var(--pbcon-gap-XS); }
   .faq-title { font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
   .faq-icon { padding: var(--pbcon-padding-XS); border-radius: var(--pbcon-border-radius-SM); background: var(--pbcon-color-bg-brand-primary-medium); }
   .faq-icon-minus { top: var(--pbcon-padding-XS); left: var(--pbcon-padding-XS); }
   .faq-icon svg { width: var(--pbcon-icon-size-MD); height: var(--pbcon-icon-size-MD); }
-  .faq-content { padding-top: var(--pbcon-padding-XL); font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
+  .faq-content { padding-top: var(--pbcon-gap-XS); font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
 }
 .faq-icon { position: relative; }
 .faq-icon-plus, .faq-icon-minus { display: block; transition: opacity var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard), transform var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard); }
@@ -504,8 +506,6 @@ Proposed (not defined in Figma, needs design approval):
 
 Pending:
 
-- Spacing families are mixed in Figma: the gap between title and icon uses `margin-spacing-*`
-  and the gap between header and content uses `padding-*`. Decide whether gaps get their own family.
 - Toggle icon container background uses a different token per device
   (`pbcon-color-fg-brand-primary-medium` on Desktop/tablet,
   `pbcon-color-bg-brand-primary-medium` on Mobile). Both resolve to the
