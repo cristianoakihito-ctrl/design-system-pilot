@@ -214,7 +214,7 @@ General motion rules and every motion token: `/foundations/motion.md`.
 
 | Element | Change | Duration | Delay | Easing |
 | --- | --- | --- | --- | --- |
-| Content | opacity 1 to 0 | `duration-XS` (100ms) | none | `easing-standard-accelerate` |
+| Content | opacity 1 to 0, moves from 0 to `-distance-SM` on the Y axis | `duration-XS` (100ms) | none | `easing-standard-accelerate` |
 | Panel | height from content height to 0 | `duration-MD` (200ms) | none | `easing-standard` |
 | Icons | reverse of Expand | `duration-MD` (200ms) | none | `easing-standard` |
 | Panel | becomes hidden to assistive technology and keyboard | instant | `duration-MD` (200ms) | none |
@@ -344,6 +344,7 @@ The header button resets the browser button styles (`appearance`, `border`, `bac
 .faq-title { flex-grow: 1; min-width: 0; font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-700); line-height: var(--pbcon-line-height-17-150); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
 .faq-icon { display: flex; flex-shrink: 0; padding: var(--pbcon-padding-SM); border-radius: var(--pbcon-border-radius-SM); background: var(--pbcon-color-fg-brand-primary-medium); }
 .faq-icon-minus { top: var(--pbcon-padding-SM); left: var(--pbcon-padding-SM); }
+.faq-icon svg { width: var(--pbcon-icon-size-LG); height: var(--pbcon-icon-size-LG); }
 .faq-content { padding-top: var(--pbcon-gap-SM); font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-400); line-height: var(--pbcon-line-height-17-150); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
 @media (max-width: 430px) {
   .faq-item { padding: var(--pbcon-padding-XL); }
@@ -359,8 +360,8 @@ The header button resets the browser button styles (`appearance`, `border`, `bac
 .faq-icon-minus { position: absolute; opacity: 0; transform: rotate(-90deg); }
 .faq-trigger[aria-expanded="true"] .faq-icon-plus { opacity: 0; transform: rotate(90deg); }
 .faq-trigger[aria-expanded="true"] .faq-icon-minus { opacity: 1; transform: rotate(0deg); }
-.faq-panel { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard), visibility 0s linear var(--pbcon-motion-duration-MD); }
-.faq-panel[data-state="open"] { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows var(--pbcon-motion-duration-LG) var(--pbcon-motion-easing-soft-decelerate), visibility 0s linear 0s; }
+.faq-panel { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard), visibility var(--pbcon-motion-duration-none) var(--pbcon-motion-easing-linear) var(--pbcon-motion-duration-MD); }
+.faq-panel[data-state="open"] { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows var(--pbcon-motion-duration-LG) var(--pbcon-motion-easing-soft-decelerate), visibility var(--pbcon-motion-duration-none) var(--pbcon-motion-easing-linear) var(--pbcon-motion-duration-none); }
 .faq-clip { min-height: 0; overflow: hidden; }
 .faq-content { opacity: 0; transform: translateY(calc(-1 * var(--pbcon-motion-distance-SM))); transition: opacity var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate), transform var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate); }
 .faq-panel[data-state="open"] .faq-content { opacity: 1; transform: none; transition: opacity var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard-decelerate) var(--pbcon-motion-duration-XXS), transform var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard-decelerate) var(--pbcon-motion-duration-XXS); }

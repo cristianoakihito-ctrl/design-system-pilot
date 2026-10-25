@@ -32,7 +32,7 @@ Figma prototypes cannot reproduce the full motion (staggered content fade, icon 
 | `duration-none` | 0ms | Instant change; reduced motion |
 | `duration-XXS` | 50ms | Small delays to stagger related changes |
 | `duration-XS` | 100ms | Fades of small elements; content leaving; reduced motion fades |
-| `duration-SM` | 150ms | Small state changes (not used by a component yet) |
+| `duration-SM` | 150ms | Small state changes, such as a hover color (FAQ item border) |
 | `duration-MD` | 200ms | Icons; collapsing; elements leaving |
 | `duration-LG` | 300ms | Expanding panels and containers |
 | `duration-XL` | 400ms | Large surfaces (not used by a component yet) |
