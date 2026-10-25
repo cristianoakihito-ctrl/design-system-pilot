@@ -49,7 +49,7 @@ FAQ list consists of:
 
 | Property | Values |
 | --- | --- |
-| Device | `Desktop`, `Mobile` |
+| Device | `Desktop/tablet`, `Mobile` |
 
 Each `Device` value uses the FAQ item with the matching device
 (`Desktop/tablet` or `Mobile`). All items inside the list use the same device.
@@ -146,7 +146,5 @@ Proposed (not defined in Figma, needs design approval):
 
 Pending:
 
-- The `Device` values of FAQ list are `Desktop` and `Mobile`, while FAQ item uses
-  `Desktop/tablet` and `Mobile`. Rename `Desktop` to `Desktop/tablet` in Figma to match.
 - The Figma component description is empty.
 - FAQ category (groups of items with their own titles) is not documented yet.
