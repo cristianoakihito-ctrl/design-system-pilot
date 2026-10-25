@@ -61,7 +61,7 @@ Each `Device` value uses the FAQ item with the matching device
 ### Container
 
 - Direction: vertical
-- Gap between items: `gap-XS` (16), on Desktop and on Mobile
+- Gap between items: `gap-XS` (16) on Desktop/tablet, `gap-XXS` (8) on Mobile
 - Padding: none
 - Width: fills the available width; the Figma widths (925px and 328px) are
   demonstration widths, not component rules
@@ -71,7 +71,7 @@ Each `Device` value uses the FAQ item with the matching device
 
 - The list owns the space between items. FAQ item has no outer margin.
 - The gap follows the Design System rule: space between two elements uses `gap-*`.
-- When an item expands or collapses, the items below it move with it and the gap stays 16.
+- When an item expands or collapses, the items below it move with it and the gap stays the same (16 on Desktop/tablet, 8 on Mobile).
 
 ---
 
@@ -116,9 +116,10 @@ A working example with both devices: `/examples/faq-item.html`.
 
 ```css
 .faq-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--pbcon-gap-XS); }
+@media (max-width: 430px) {
+  .faq-list { gap: var(--pbcon-gap-XXS); }
+}
 ```
-
-The CSS is the same on Desktop/tablet and Mobile.
 
 ---
 
@@ -136,7 +137,7 @@ Confirmed:
 
 - Anatomy
 - Device variants
-- Vertical layout and gap `gap-XS` (16) on both devices
+- Vertical layout and gap: `gap-XS` (16) on Desktop/tablet, `gap-XXS` (8) on Mobile
 - No padding on the container
 
 Proposed (not defined in Figma, needs design approval):
