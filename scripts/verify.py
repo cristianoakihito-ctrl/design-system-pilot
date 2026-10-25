@@ -9,7 +9,8 @@ Checagens:
   2. Ícones: nome em kebab-case, tela 24 x 24 e viewBox 24 x 24.
   3. Documentos e exemplos: arquivos citados existem e toda variável
      --pbcon-* usada ou declarada existe nos tokens.
-  4. Exemplos: o valor de cada token declarado no :root é igual ao do repositório.
+  4. Exemplos: o valor de cada token declarado no :root é igual ao do repositório
+     e toda --pbcon-* usada no exemplo está declarada nele.
 """
 import glob
 import json
@@ -161,6 +162,9 @@ for path in sorted(glob.glob(os.path.join(ROOT, "examples", "*.html"))):
     with open(path, encoding="utf-8") as f:
         text = f.read()
     plain = re.sub(r"data:[^)\"']+", "", text)
+    declared = set(re.findall(r"(--pbcon-[A-Za-z0-9-]+)\s*:", plain))
+    for var in sorted(set(re.findall(r"var\((--pbcon-[A-Za-z0-9-]+)\)", plain)) - declared):
+        err(where, f"usa {var} sem declará-la no :root do exemplo")
     for var, value in re.findall(r"(--pbcon-[A-Za-z0-9-]+)\s*:\s*([^;]+);", plain):
         value = value.strip()
         if var not in expected:

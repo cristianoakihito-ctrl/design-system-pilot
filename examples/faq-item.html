@@ -14,6 +14,7 @@
     --pbcon-color-bg-neutral-default: #FFFFFF;
     --pbcon-color-border-brand-primary-high: #004BD4;
     --pbcon-color-border-default-low: #DDDDDD;
+    --pbcon-color-border-neutral-medium: #B0B0B0;
     --pbcon-color-fg-brand-primary-medium: #D9E3FF;
     --pbcon-color-icon-brand-primary-high: #004BD4;
     --pbcon-color-text-neutral-high: #000000;
@@ -38,6 +39,7 @@
     --pbcon-motion-distance-SM: 8px;
     --pbcon-motion-duration-LG: 300ms;
     --pbcon-motion-duration-MD: 200ms;
+    --pbcon-motion-duration-SM: 150ms;
     --pbcon-motion-duration-XS: 100ms;
     --pbcon-motion-duration-XXS: 50ms;
     --pbcon-motion-easing-linear: cubic-bezier(0, 0, 1, 1);
@@ -58,7 +60,8 @@
   .icon-btn { appearance: none; border: none; background: transparent; padding: 0; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-family: inherit; color: inherit; }
   .icon-btn:focus-visible { outline: var(--pbcon-border-width-SM) solid var(--pbcon-color-border-brand-primary-high); outline-offset: var(--pbcon-border-width-SM); }
   ul { list-style: none; margin: 0; padding: 0; }
-  .faq-item { padding: var(--pbcon-padding-XL) var(--pbcon-padding-XXL); border: var(--pbcon-border-width-XS) solid var(--pbcon-color-border-default-low); border-radius: var(--pbcon-border-radius-MD); }
+  .faq-item { padding: var(--pbcon-padding-XL) var(--pbcon-padding-XXL); border: var(--pbcon-border-width-XS) solid var(--pbcon-color-border-default-low); border-radius: var(--pbcon-border-radius-MD); transition: border-color var(--pbcon-motion-duration-SM) var(--pbcon-motion-easing-standard); }
+  @media (hover: hover) { .faq-item:hover { border-color: var(--pbcon-color-border-neutral-medium); } }
   .faq-item > h3, .faq-item > h2 { margin: 0; }
   .faq-trigger { appearance: none; border: none; background: transparent; cursor: pointer; font-family: inherit; color: inherit; display: flex; align-items: center; width: 100%; justify-content: flex-start; gap: var(--pbcon-gap-SM); padding: var(--pbcon-padding-XS) var(--pbcon-padding-none); margin: calc(-1 * var(--pbcon-padding-XS)) 0; text-align: left; }
   .faq-trigger:focus-visible { outline: var(--pbcon-border-width-SM) solid var(--pbcon-color-border-brand-primary-high); outline-offset: var(--pbcon-border-width-SM); }

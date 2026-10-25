@@ -57,7 +57,7 @@ FAQ item consists of:
 | Property | Values |
 | --- | --- |
 | Device | `Desktop/tablet`, `Mobile` |
-| State | `Default` (collapsed), `Expanded` |
+| State | `Default` (collapsed), `Expanded`, `Default hover`, `Expanded hover` |
 
 Use one FAQ item implementation for all variants.
 Do not create independent desktop and mobile components.
@@ -157,7 +157,21 @@ Do not create independent desktop and mobile components.
 
 The change between states is animated. See Motion.
 
-Hover, focus, pressed and disabled states are not defined in Figma.
+### Hover (Default hover and Expanded hover)
+
+- Applies to the whole container, on Desktop/tablet and Mobile, collapsed or expanded.
+- Only the container border changes: `pbcon-color-border-default-low` becomes `pbcon-color-border-neutral-medium`.
+- Title, toggle icon container, toggle icon, content and spacing do not change.
+- Clicking the header still toggles between Default and Expanded.
+- Hover exists only for pointers that can hover. On touch screens the border does not change.
+
+### Focus, pressed and disabled
+
+These states are not used by this component and are not designed in Figma.
+
+- Disabled does not apply: a FAQ item is always available.
+- Pressed has no visual change beyond the toggle itself.
+- Keyboard focus is not a Figma state. The focus ring in the CSS below is an accessibility requirement and uses existing tokens (`border-width-SM`, `pbcon-color-border-brand-primary-high`).
 
 ---
 
@@ -204,6 +218,14 @@ General motion rules and every motion token: `/foundations/motion.md`.
 | Panel | height from content height to 0 | `duration-MD` (200ms) | none | `easing-standard` |
 | Icons | reverse of Expand | `duration-MD` (200ms) | none | `easing-standard` |
 | Panel | becomes hidden to assistive technology and keyboard | instant | `duration-MD` (200ms) | none |
+
+### Hover
+
+| Element | Change | Duration | Delay | Easing |
+| --- | --- | --- | --- | --- |
+| Container | border color from `border-default-low` to `border-neutral-medium` | `duration-SM` (150ms) | none | `easing-standard` |
+
+Figma defines a hover transition only on `Desktop/tablet` Default (Smart animate, ease out, 0.3 s); the other three variants change instantly. This document applies one rule to all four. It is a color change only, so it stays when the user asks for less motion.
 
 ### Reduced motion
 
@@ -314,8 +336,9 @@ Inline SVG icons use `fill="currentColor"`; the icon color comes from
 The header button resets the browser button styles (`appearance`, `border`, `background`, `font`).
 
 ```css
-.faq-item { padding: var(--pbcon-padding-XL) var(--pbcon-padding-XXL); border: var(--pbcon-border-width-XS) solid var(--pbcon-color-border-default-low); border-radius: var(--pbcon-border-radius-MD); }
+.faq-item { padding: var(--pbcon-padding-XL) var(--pbcon-padding-XXL); border: var(--pbcon-border-width-XS) solid var(--pbcon-color-border-default-low); border-radius: var(--pbcon-border-radius-MD); transition: border-color var(--pbcon-motion-duration-SM) var(--pbcon-motion-easing-standard); }
 .faq-item > h3, .faq-item > h2 { margin: 0; }
+@media (hover: hover) { .faq-item:hover { border-color: var(--pbcon-color-border-neutral-medium); } }
 .faq-trigger { appearance: none; border: none; background: transparent; cursor: pointer; font-family: inherit; color: inherit; display: flex; align-items: center; width: 100%; justify-content: flex-start; gap: var(--pbcon-gap-SM); padding: var(--pbcon-padding-XS) var(--pbcon-padding-none); margin: calc(-1 * var(--pbcon-padding-XS)) 0; text-align: left; }
 .faq-trigger:focus-visible { outline: var(--pbcon-border-width-SM) solid var(--pbcon-color-border-brand-primary-high); outline-offset: var(--pbcon-border-width-SM); }
 .faq-title { flex-grow: 1; min-width: 0; font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-700); line-height: var(--pbcon-line-height-17-150); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
@@ -488,7 +511,7 @@ report the missing dependency instead of inventing one.
 Confirmed:
 
 - Anatomy
-- Device and State variants
+- Device and State variants, including Default hover and Expanded hover (border color only)
 - Container tokens
 - Desktop/tablet spacing, icon container and typography tokens
 - Mobile container spacing and typography tokens
@@ -503,7 +526,8 @@ Decided (2026-10-24), source of truth is this repository (not registered in Figm
 Proposed (not defined in Figma, needs design approval):
 
 - Header hit area extension (no visual change)
+- Hover transition on the border (`duration-SM`, `easing-standard`), one rule for the four variants; Figma has it only on `Desktop/tablet` Default
 
 Pending:
 
-- Hover, focus, pressed and disabled states.
+- None.

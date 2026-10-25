@@ -146,5 +146,4 @@ Proposed (not defined in Figma, needs design approval):
 
 Pending:
 
-- The Figma component description is empty.
 - FAQ category (groups of items with their own titles) is not documented yet.
