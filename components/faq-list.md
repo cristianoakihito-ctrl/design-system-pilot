@@ -84,8 +84,7 @@ Decided (2026-10-25), source of truth is this repository (Figma has no list beha
 - More than one item may stay expanded at the same time. This is the default.
 - Single-expanded mode is optional: opening an item collapses the others,
   using the same collapse motion as FAQ item.
-- All items start collapsed. A list may start with one item expanded when
-  the first answer is the most relevant one.
+- The first item starts expanded; all other items start collapsed. It appears expanded on first render, without animation.
 
 ---
 
@@ -143,7 +142,7 @@ Confirmed:
 Decided (2026-10-25), source of truth is this repository:
 
 - Multiple expanded items by default, single-expanded as an option
-- All items start collapsed (a list may start with one item expanded)
+- The first item starts expanded; all other items start collapsed
 
 Pending:
 

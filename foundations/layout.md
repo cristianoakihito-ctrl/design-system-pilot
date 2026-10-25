@@ -47,6 +47,21 @@ Rules:
 
 ---
 
+## Page colors
+
+| Property | Token |
+| --- | --- |
+| Page background | `pbcon-color-bg-neutral-default` (#FFFFFF) |
+| Default text color | `pbcon-color-text-neutral-high` (#000000) |
+
+Rules:
+
+- These are defaults for the page. A component that defines its own colors in
+  `/components/` uses its own colors, never the page defaults.
+- Text that is not inside a component (for example the screen title) inherits the default text color.
+
+---
+
 ## Screen title
 
 Not defined. The title style per device will be defined later.
@@ -54,7 +69,7 @@ Not defined. The title style per device will be defined later.
 Until then:
 
 - Do not invent a size, weight or color for the screen title.
-- Use a heading element (`h1`) and inherit the page font and color.
+- Use a heading element (`h1`) and inherit the page font and the default text color.
 - List the screen title as "not defined" when delivering a screen.
 
 ---
@@ -62,6 +77,11 @@ Until then:
 ## Reference implementation
 
 ```css
+body {
+  margin: 0;
+  background: var(--pbcon-color-bg-neutral-default);
+  color: var(--pbcon-color-text-neutral-high);
+}
 .page {
   box-sizing: content-box;
   max-width: var(--pbcon-layout-max-width);
@@ -86,6 +106,7 @@ Media queries cannot read CSS variables: the `430px` must match `breakpoints-mob
 ## Token sources
 
 - Spacing, breakpoints and layout: `/tokens/spacing.json`
+- Page colors: `/tokens/colors/semantic.json`
 
 ---
 
@@ -94,6 +115,7 @@ Media queries cannot read CSS variables: the `430px` must match `breakpoints-mob
 Decided (2026-10-25):
 
 - Screen ranges, page margins (same on all four sides), space between title and content
+- Page background and default text color
 
 Provisional:
 
