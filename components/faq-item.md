@@ -104,7 +104,8 @@ Do not create independent desktop and mobile components.
 
 - Padding: `padding-SM`
 - Border radius: `border-radius-SM`
-- Icon size: 24 x 24
+- Icon size: `icon-size-LG` (24 x 24)
+- Container size: 40 x 40
 
 ### Typography
 
@@ -130,7 +131,7 @@ Do not create independent desktop and mobile components.
 - Background: `pbcon-color-bg-brand-primary-medium`
 - Padding: `padding-XS`
 - Border radius: `border-radius-SM`
-- Icon size: 20 x 20 (no icon size token yet, see Documentation status)
+- Icon size: `icon-size-MD` (20 x 20)
 - Container size: 32 x 32
 
 ### Typography
@@ -325,7 +326,7 @@ The header button resets the browser button styles (`appearance`, `border`, `bac
   .faq-title { font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
   .faq-icon { padding: var(--pbcon-padding-XS); border-radius: var(--pbcon-border-radius-SM); background: var(--pbcon-color-bg-brand-primary-medium); }
   .faq-icon-minus { top: var(--pbcon-padding-XS); left: var(--pbcon-padding-XS); }
-  .faq-icon svg { width: 20px; height: 20px; } /* 20px: no icon size token yet (pending in faq-item.md) */
+  .faq-icon svg { width: var(--pbcon-icon-size-MD); height: var(--pbcon-icon-size-MD); }
   .faq-content { padding-top: var(--pbcon-padding-XL); font-size: var(--pbcon-font-size-12); line-height: var(--pbcon-line-height-12-150); }
 }
 .faq-icon { position: relative; }
@@ -503,11 +504,6 @@ Proposed (not defined in Figma, needs design approval):
 
 Pending:
 
-- Figma Mobile toggle icon container still has padding 6.4px, border radius 6.4px
-  and icon 19.2 x 19.2 (an 80% scale of Desktop/tablet). Update it to `padding-XS` (6),
-  `border-radius-SM` (8) and icon 20 x 20, as decided. The container stays 32 x 32.
-- There is no icon size token. Icon sizes are 24 x 24 (Desktop/tablet) and 20 x 20 (Mobile).
-  Create an icon size token group only when a second component needs it.
 - Spacing families are mixed in Figma: the gap between title and icon uses `margin-spacing-*`
   and the gap between header and content uses `padding-*`. Decide whether gaps get their own family.
 - The content entrance offset (8px) borrows `padding-SM`, a spacing token, as an animation distance.

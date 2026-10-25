@@ -37,6 +37,10 @@
   "margin-spacing-XL": 48,
   "margin-spacing-XXL": 56,
 
+  "icon-size-SM": 16,
+  "icon-size-MD": 20,
+  "icon-size-LG": 24,
+
   "breakpoints-mobile-min-width": 320,
   "breakpoints-mobile-max-width": 430
 }

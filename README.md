@@ -26,7 +26,7 @@ Piloto pessoal para estruturar assets e documentação do Design System.
 | `tokens/colors/global.json` | Paleta global (valores HEX) |
 | `tokens/colors/semantic.json` | Cores semânticas (apontam para a paleta global) |
 | `tokens/colors/component.json` | Cores de componentes (apontam para semânticas ou globais) |
-| `tokens/spacing.json` | Padding, margem, raio, borda e breakpoints |
+| `tokens/spacing.json` | Padding, margem, raio, borda, tamanho de ícone e breakpoints |
 | `tokens/typography.json` | Família, tamanhos, pesos, alturas de linha e espaçamento entre letras |
 | `tokens/drop-shadow.json` | Sombras |
 | `tokens/motion.json` | Durações e curvas de animação (regras em `foundations/motion.md`) |
