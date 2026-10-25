@@ -170,7 +170,7 @@ The change between states is animated. See Motion.
 These states are not used by this component and are not designed in Figma.
 
 - Disabled does not apply: a FAQ item is always available.
-- Pressed has no visual change beyond the toggle itself.
+- Pressed has no visual change beyond the toggle itself. On touch screens, remove the browser tap highlight (`-webkit-tap-highlight-color: transparent` on the header button).
 - Keyboard focus is not a Figma state. The focus ring in the CSS below is an accessibility requirement and uses existing tokens (`border-width-SM`, `pbcon-color-border-brand-primary-high`).
 
 ---
@@ -339,7 +339,7 @@ The header button resets the browser button styles (`appearance`, `border`, `bac
 .faq-item { padding: var(--pbcon-padding-XL) var(--pbcon-padding-XXL); border: var(--pbcon-border-width-XS) solid var(--pbcon-color-border-default-low); border-radius: var(--pbcon-border-radius-MD); transition: border-color var(--pbcon-motion-duration-SM) var(--pbcon-motion-easing-standard); }
 .faq-item > h3, .faq-item > h2 { margin: 0; }
 @media (hover: hover) { .faq-item:hover { border-color: var(--pbcon-color-border-neutral-medium); } }
-.faq-trigger { appearance: none; border: none; background: transparent; cursor: pointer; font-family: inherit; color: inherit; display: flex; align-items: center; width: 100%; justify-content: flex-start; gap: var(--pbcon-gap-SM); padding: var(--pbcon-padding-XS) var(--pbcon-padding-none); margin: calc(-1 * var(--pbcon-padding-XS)) 0; text-align: left; }
+.faq-trigger { appearance: none; border: none; background: transparent; cursor: pointer; font-family: inherit; color: inherit; display: flex; align-items: center; width: 100%; justify-content: flex-start; gap: var(--pbcon-gap-SM); padding: var(--pbcon-padding-XS) var(--pbcon-padding-none); margin: calc(-1 * var(--pbcon-padding-XS)) 0; text-align: left; -webkit-tap-highlight-color: transparent; }
 .faq-trigger:focus-visible { outline: var(--pbcon-border-width-SM) solid var(--pbcon-color-border-brand-primary-high); outline-offset: var(--pbcon-border-width-SM); }
 .faq-title { flex-grow: 1; min-width: 0; font-size: var(--pbcon-font-size-17); font-weight: var(--pbcon-font-weight-700); line-height: var(--pbcon-line-height-17-150); letter-spacing: var(--pbcon-letter-spacing-0-4); color: var(--pbcon-color-text-neutral-high); }
 .faq-icon { display: flex; flex-shrink: 0; padding: var(--pbcon-padding-SM); border-radius: var(--pbcon-border-radius-SM); background: var(--pbcon-color-fg-brand-primary-medium); }
@@ -523,10 +523,11 @@ Decided (2026-10-24), source of truth is this repository (not registered in Figm
 - Motion (option C) and the tokens in `/tokens/motion.json`
 - Mobile toggle icon container: `padding-XS`, `border-radius-SM` and icon 20 x 20 (replaces the 6.4 / 6.4 / 19.2 values; aligned in Figma)
 
-Proposed (not defined in Figma, needs design approval):
+Decided (2026-10-25), source of truth is this repository:
 
 - Header hit area extension (no visual change)
 - Hover transition on the border (`duration-SM`, `easing-standard`), one rule for the four variants; Figma has it only on `Desktop/tablet` Default
+- No tap highlight on touch screens (`-webkit-tap-highlight-color: transparent`), so pressed has no visual change
 
 Pending:
 

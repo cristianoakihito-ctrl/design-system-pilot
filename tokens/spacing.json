@@ -42,5 +42,7 @@
   "icon-size-LG": 24,
 
   "breakpoints-mobile-min-width": 320,
-  "breakpoints-mobile-max-width": 430
+  "breakpoints-mobile-max-width": 430,
+
+  "layout-max-width": 1200
 }

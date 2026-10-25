@@ -79,7 +79,7 @@ Each `Device` value uses the FAQ item with the matching device
 
 - Each item toggles on its own (see `/components/faq-item.md`, section Behavior).
 
-Proposed (not defined in Figma, needs design approval):
+Decided (2026-10-25), source of truth is this repository (Figma has no list behavior):
 
 - More than one item may stay expanded at the same time. This is the default.
 - Single-expanded mode is optional: opening an item collapses the others,
@@ -140,10 +140,10 @@ Confirmed:
 - Vertical layout and gap: `gap-XS` (16) on Desktop/tablet, `gap-XXS` (8) on Mobile
 - No padding on the container
 
-Proposed (not defined in Figma, needs design approval):
+Decided (2026-10-25), source of truth is this repository:
 
 - Multiple expanded items by default, single-expanded as an option
-- All items start collapsed
+- All items start collapsed (a list may start with one item expanded)
 
 Pending:
 
