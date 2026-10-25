@@ -80,6 +80,8 @@ for key, value in typo.get("font-family", {}).items():
     expected[f"--pbcon-font-family-{key}"] = (value, None)
 for key, value in motion.get("duration", {}).get("values", {}).items():
     expected[f"--pbcon-motion-duration-{key}"] = (f"{value}ms", None)
+for key, value in motion.get("distance", {}).get("values", {}).items():
+    expected[f"--pbcon-motion-distance-{key}"] = (f"{value}px", None)
 for key, value in motion.get("easing", {}).items():
     expected[f"--pbcon-motion-easing-{key}"] = (value, None)
 

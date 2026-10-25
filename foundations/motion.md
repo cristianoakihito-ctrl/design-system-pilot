@@ -42,6 +42,18 @@ Do not go above `duration-XL` for interface feedback.
 
 ---
 
+## Distance tokens
+
+How far an element travels while it enters or leaves. Use these instead of spacing tokens.
+
+| Token | Value | Use |
+| --- | --- | --- |
+| `distance-XS` | 4px | Reserved for very small movements (not used yet) |
+| `distance-SM` | 8px | Content entering below its header (FAQ item) |
+| `distance-MD` | 16px | Reserved for larger entrances (not used yet) |
+
+---
+
 ## Easing tokens
 
 | Token | Value | Use |

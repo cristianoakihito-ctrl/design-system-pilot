@@ -192,7 +192,7 @@ General motion rules and every motion token: `/foundations/motion.md`.
 | Element | Change | Duration | Delay | Easing |
 | --- | --- | --- | --- | --- |
 | Panel | height from 0 to content height | `duration-LG` (300ms) | none | `easing-soft-decelerate` |
-| Content | opacity 0 to 1, moves from `-padding-SM` to 0 on the Y axis | `duration-MD` (200ms) | `duration-XXS` (50ms) | `easing-standard-decelerate` |
+| Content | opacity 0 to 1, moves from `-distance-SM` to 0 on the Y axis | `duration-MD` (200ms) | `duration-XXS` (50ms) | `easing-standard-decelerate` |
 | Plus icon | opacity 1 to 0, rotates 0 to 90 degrees | `duration-MD` (200ms) | none | `easing-standard` |
 | Minus icon | opacity 0 to 1, rotates -90 to 0 degrees | `duration-MD` (200ms) | none | `easing-standard` |
 
@@ -337,7 +337,7 @@ The header button resets the browser button styles (`appearance`, `border`, `bac
 .faq-panel { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard), visibility 0s linear var(--pbcon-motion-duration-MD); }
 .faq-panel[data-state="open"] { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows var(--pbcon-motion-duration-LG) var(--pbcon-motion-easing-soft-decelerate), visibility 0s linear 0s; }
 .faq-clip { min-height: 0; overflow: hidden; }
-.faq-content { opacity: 0; transform: translateY(calc(-1 * var(--pbcon-padding-SM))); transition: opacity var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate), transform var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate); }
+.faq-content { opacity: 0; transform: translateY(calc(-1 * var(--pbcon-motion-distance-SM))); transition: opacity var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate), transform var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate); }
 .faq-panel[data-state="open"] .faq-content { opacity: 1; transform: none; transition: opacity var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard-decelerate) var(--pbcon-motion-duration-XXS), transform var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard-decelerate) var(--pbcon-motion-duration-XXS); }
 @media (prefers-reduced-motion: reduce) {
   .faq-panel, .faq-panel[data-state="open"] { transition: none; }
@@ -506,8 +506,6 @@ Pending:
 
 - Spacing families are mixed in Figma: the gap between title and icon uses `margin-spacing-*`
   and the gap between header and content uses `padding-*`. Decide whether gaps get their own family.
-- The content entrance offset (8px) borrows `padding-SM`, a spacing token, as an animation distance.
-  Define a distance token in `/tokens/motion.json`.
 - Toggle icon container background uses a different token per device
   (`pbcon-color-fg-brand-primary-medium` on Desktop/tablet,
   `pbcon-color-bg-brand-primary-medium` on Mobile). Both resolve to the

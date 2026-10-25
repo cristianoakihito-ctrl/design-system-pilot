@@ -29,7 +29,7 @@ Piloto pessoal para estruturar assets e documentação do Design System.
 | `tokens/spacing.json` | Padding, margem, raio, borda, tamanho de ícone e breakpoints |
 | `tokens/typography.json` | Família, tamanhos, pesos, alturas de linha e espaçamento entre letras |
 | `tokens/drop-shadow.json` | Sombras |
-| `tokens/motion.json` | Durações e curvas de animação (regras em `foundations/motion.md`) |
+| `tokens/motion.json` | Durações, distâncias e curvas de animação (regras em `foundations/motion.md`) |
 
 ## Convenções
 

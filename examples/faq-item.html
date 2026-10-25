@@ -36,6 +36,7 @@
     --pbcon-margin-spacing-SM: 24px;
     --pbcon-margin-spacing-XL: 48px;
     --pbcon-margin-spacing-XS: 16px;
+    --pbcon-motion-distance-SM: 8px;
     --pbcon-motion-duration-LG: 300ms;
     --pbcon-motion-duration-MD: 200ms;
     --pbcon-motion-duration-XS: 100ms;
@@ -84,7 +85,7 @@
   .faq-panel { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard), visibility 0s linear var(--pbcon-motion-duration-MD); }
   .faq-panel[data-state="open"] { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows var(--pbcon-motion-duration-LG) var(--pbcon-motion-easing-soft-decelerate), visibility 0s linear 0s; }
   .faq-clip { min-height: 0; overflow: hidden; }
-  .faq-content { opacity: 0; transform: translateY(calc(-1 * var(--pbcon-padding-SM))); transition: opacity var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate), transform var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate); }
+  .faq-content { opacity: 0; transform: translateY(calc(-1 * var(--pbcon-motion-distance-SM))); transition: opacity var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate), transform var(--pbcon-motion-duration-XS) var(--pbcon-motion-easing-standard-accelerate); }
   .faq-panel[data-state="open"] .faq-content { opacity: 1; transform: none; transition: opacity var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard-decelerate) var(--pbcon-motion-duration-XXS), transform var(--pbcon-motion-duration-MD) var(--pbcon-motion-easing-standard-decelerate) var(--pbcon-motion-duration-XXS); }
   @media (prefers-reduced-motion: reduce) {
     .faq-panel, .faq-panel[data-state="open"] { transition: none; }
