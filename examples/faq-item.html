@@ -46,7 +46,6 @@
     --pbcon-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
     --pbcon-motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
     --pbcon-motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
-    --pbcon-padding-LG: 12px;
     --pbcon-padding-SM: 8px;
     --pbcon-padding-XL: 16px;
     --pbcon-padding-XS: 6px;
@@ -96,11 +95,11 @@
   .ex-main { max-width: 973px; margin: 0 auto; padding: var(--pbcon-gap-XL) var(--pbcon-gap-SM); }
   .ex-h1 { margin: 0; font-size: var(--pbcon-font-size-27); font-weight: var(--pbcon-font-weight-800); line-height: var(--pbcon-line-height-27-120); letter-spacing: var(--pbcon-letter-spacing-0); }
   .ex-p { margin: var(--pbcon-padding-SM) 0 var(--pbcon-gap-SM); font-size: var(--pbcon-font-size-14); font-weight: var(--pbcon-font-weight-400); line-height: var(--pbcon-line-height-14-150); letter-spacing: var(--pbcon-letter-spacing-0); color: var(--pbcon-color-text-neutral-low); }
-  .ex-list { display: flex; flex-direction: column; gap: var(--pbcon-padding-LG); }
+  .faq-list { display: flex; flex-direction: column; gap: var(--pbcon-gap-XS); }
 </style>
 </head>
 <body>
-<main class="ex-main"><h1 class="ex-h1">FAQ item</h1><p class="ex-p">Exemplo com o motion definido. Abaixo de 430px de largura o componente usa a versão Mobile.</p><ul class="ex-list"><li class="faq-item"><h3 style="margin: 0;"><button type="button" class="icon-btn faq-trigger" id="faq-h1" aria-expanded="false" aria-controls="faq-c1"><span class="faq-title">Quem pode contratar o empréstimo?</span><span class="faq-icon"><span class="faq-icon-plus"><svg data-icon="actions-basic-plus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<main class="ex-main"><h1 class="ex-h1">FAQ item</h1><p class="ex-p">Exemplo com o motion definido. Abaixo de 430px de largura o componente usa a versão Mobile.</p><ul class="faq-list"><li class="faq-item"><h3 style="margin: 0;"><button type="button" class="icon-btn faq-trigger" id="faq-h1" aria-expanded="false" aria-controls="faq-c1"><span class="faq-title">Quem pode contratar o empréstimo?</span><span class="faq-icon"><span class="faq-icon-plus"><svg data-icon="actions-basic-plus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.0001 3.51465C13.0001 2.96236 12.5523 2.51465 12.0001 2.51465C11.4478 2.51465 11.0001 2.96236 11.0001 3.51465V10.9999H3.51477C2.96249 10.9999 2.51477 11.4476 2.51477 11.9999C2.51477 12.5522 2.96249 12.9999 3.51477 12.9999H11.0001V20.4852C11.0001 21.0375 11.4478 21.4852 12.0001 21.4852C12.5523 21.4852 13.0001 21.0375 13.0001 20.4852V12.9999H20.4853C21.0376 12.9999 21.4853 12.5522 21.4853 11.9999C21.4853 11.4476 21.0376 10.9999 20.4853 10.9999H13.0001V3.51465Z" fill="currentColor"/>
 </svg></span><span class="faq-icon-minus"><svg data-icon="actions-basic-minus" aria-hidden="true" style="color: var(--pbcon-color-icon-brand-primary-high); flex-shrink: 0; display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4 11H20.9706C21.5228 11 21.9706 11.4477 21.9706 12C21.9706 12.5523 21.5228 13 20.9706 13H4C3.44771 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11Z" fill="currentColor"/>

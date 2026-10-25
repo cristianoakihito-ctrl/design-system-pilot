@@ -7,6 +7,7 @@ Also known as: Accordion.
 The Figma component is the visual source of truth.
 
 Figma component name: `FAQ item` (component set with `Device` and `State` properties).
+Several items are stacked by FAQ list (`/components/faq-list.md`), which owns the space between them.
 
 This document describes how FAQ item must be composed using the
 Design System tokens and assets available in this repository.
@@ -164,8 +165,7 @@ Hover, focus, pressed and disabled states are not defined in Figma.
 
 - Selecting the header toggles between Default and Expanded.
 - Content wraps naturally according to the available width.
-- Whether more than one item may stay expanded at the same time is not defined.
-- Whether any item starts expanded is not defined.
+- How items behave together (more than one expanded, which start expanded) is defined by FAQ list, see `/components/faq-list.md`.
 
 ---
 
@@ -498,7 +498,7 @@ Confirmed:
 Decided (2026-10-24), source of truth is this repository (not registered in Figma, by decision):
 
 - Motion (option C) and the tokens in `/tokens/motion.json`
-- Mobile toggle icon container: `padding-XS`, `border-radius-SM` and icon 20 x 20 (replaces the 6.4 / 6.4 / 19.2 values; Figma still to be aligned)
+- Mobile toggle icon container: `padding-XS`, `border-radius-SM` and icon 20 x 20 (replaces the 6.4 / 6.4 / 19.2 values; aligned in Figma)
 
 Proposed (not defined in Figma, needs design approval):
 
@@ -512,6 +512,4 @@ Pending:
   same value; choose one.
 - In Figma the whole container is the button. For accessibility only the
   header should be interactive.
-- Spacing between consecutive FAQ items is not defined.
 - Hover, focus, pressed and disabled states.
-- Single or multiple expanded items.

@@ -18,6 +18,7 @@ Piloto pessoal para estruturar assets e documentação do Design System.
 | --- | --- | --- |
 | Alert Card | `components/alert-card.md` | |
 | FAQ item (accordion) | `components/faq-item.md` | `examples/faq-item.html` |
+| FAQ list | `components/faq-list.md` | `examples/faq-item.html` |
 
 ## Tokens
 
